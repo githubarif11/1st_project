@@ -271,6 +271,8 @@ nav li:hover .dropdown {
 }
 
 
+
+
 footer {
     background-color: #27187e;
     color: #f1f2f6;
@@ -282,4 +284,60 @@ footer {
     margin: 0 10px;
     color: #f1f2f6;
     font-size: 24px;
+}
+
+/* Responsive Mobile Navigation */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #f1f2f6;
+    cursor: pointer;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #27187e;
+        position: absolute;
+        top: 70px; /* Adjust depending on header height */
+        left: 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav .dropdown {
+        position: static; /* Dropdown inside mobile menu */
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack the about section content */
+    }
+
+    .services-grid {
+        flex-direction: column; /* Stack services vertically */
+        align-items: center;
+    }
+
+    .service {
+        width: 100%; /* Full width for services */
+        margin-bottom: 20px;
+    }
 }
